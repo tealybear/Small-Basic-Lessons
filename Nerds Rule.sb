@@ -1,0 +1,41 @@
+GraphicsWindow.Height=600
+GraphicsWindow.Width=600
+GraphicsWindow.BackgroundColor= "Black"
+GraphicsWindow.BrushColor= "Green"
+GraphicsWindow.PenColor= "Yellow" 'Yellow ring
+GraphicsWindow.DrawBoundText(30,80,100,"Enter 1 or 2 into the text window for some cool effects. Then mouse over for a message.")
+X= TextWindow.ReadNumber()
+If X=1 Then
+  TextWindow.Hide()
+  GraphicsWindow.DrawEllipse(225,225,150,150)
+GraphicsWindow.FillEllipse(226,226,149,149)
+Triangle= Shapes.AddTriangle(75,125,50,180,25,125)
+Shapes.Animate(Triangle,450,400,2000)
+Program.Delay(2500)
+Shapes.Animate(Triangle,50,25,2000)
+start1:
+GraphicsWindow.BrushColor= "Red"
+  Mx= GraphicsWindow.MouseX
+    My= GraphicsWindow.MouseY
+  Nerds =Shapes.AddText("NERDS RULE!")
+  Shapes.Animate(Nerds,Mx,My,500)
+  Goto start1
+EndIf
+If X>1 Then
+  TextWindow.Hide()
+  GraphicsWindow.BrushColor= "Red"
+  GraphicsWindow.FillTriangle(100,25,125,125,100,25)
+  GraphicsWindow.FillRectangle(500,500,100,100)
+  Rectangle= Shapes.AddRectangle(100,100)
+  Shapes.Animate(Rectangle,500,500,2000)
+  Program.Delay(2500)
+  Shapes.Animate(Rectangle,100,100,2000)
+  Program.Delay(200)
+  start2:
+  Mx= GraphicsWindow.MouseX
+    My= GraphicsWindow.MouseY
+  Nerds =Shapes.AddText("NERDS RULE!")
+  Shapes.Animate(Nerds,Mx,My,100)
+  Goto start2
+  
+  EndIf

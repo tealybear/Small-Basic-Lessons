@@ -1,0 +1,14 @@
+GraphicsWindow.Height = 600 'The height of the graphics window upon executing
+GraphicsWindow.Width = 600
+MoveShape() 'This subroutine moves the desired shape.
+Sub MoveShape 'This starts the subroutine
+  Begin:     'This loops the creation, acquiring of the x,y axis, and the movement of the triangles.
+  graphicswindow.BrushColor= GraphicsWindow.GetRandomColor() 'Here I made it randomize the triangle color.
+  Triangle = Shapes.AddTriangle(300,200,200,400,400,400) 'The properties of the Triangle being generated.
+
+    Ax = GraphicsWindow.MouseX  'Ax stands for Animation X-Axis, here I am using this variable to hold the value of the mouse's current x value.
+  Ay = GraphicsWindow.MouseY 'Same goes as above line sub "Y"
+  Shapes.Animate(Triangle, (Ax-200),(Ay-200),1050) 'This is where I animate the triangle based on the mouse's location.
+  Program.Delay(150) 'The lower this delay the faster the triangles will generate
+Goto Begin 'This goto operation will move the program back to where I typed "Begin:" therefor looping.
+EndSub 'This ends the subroutine

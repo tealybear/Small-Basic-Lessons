@@ -1,0 +1,21 @@
+TextWindow.Title= "Gorilla Games Branch Status"
+TextWindow.WriteLine("The current time in Portland is " + Clock.Time + ".")
+Portland= Clock.Hour
+NewYork= Clock.Hour+3
+London= Clock.Hour+8
+If NewYork>9 And NewYork<21 Then
+  StatusNY= "Open"
+  TextWindow.ForegroundColor= "Green"
+Else
+  StatusNY= "Closed"
+  TextWindow.ForegroundColor= "Red"
+EndIf
+If London>9 And London<21 Then
+  TextWindow.ForegroundColor= "Green"
+  StatusL= "Open"
+Else
+  StatusL= "Closed"
+  TextWindow.ForegroundColor= "Red"
+EndIf
+TextWindow.WriteLine("It is currently " + (Clock.Hour+3)+":"+Clock.Minute+":"+Clock.Second+" at the New York branch of Gorilla Games is currently: " +StatusNY+ ".")
+TextWindow.WriteLine("It is currently " + ((Clock.Hour+8)-24)+":"+Clock.Minute+":"+Clock.Second+" at the London branch of Gorilla Games is currently: " +StatusL+ ".")

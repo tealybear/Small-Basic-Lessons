@@ -1,0 +1,22 @@
+Turtle.Show()
+Turtle.X=300
+Turtle.Y=150
+Angle= 360/3
+Turtle.Speed=9
+For X=1 To 3
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+Turtle.Turn(Angle)
+Turtle.Move(100)
+EndFor
+For Y=1 To 4
+    GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+Program.Delay(500)
+Turtle.TurnLeft()
+Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(185)
+Turtle.TurnRight()
+Turtle.Move(150)
+EndFor

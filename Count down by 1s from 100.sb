@@ -1,0 +1,4 @@
+For X = 100 To 1 Step -1
+   Program.Delay(100)
+ TextWindow.WriteLine(X)
+EndFor

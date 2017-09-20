@@ -1,0 +1,31 @@
+GraphicsWindow.MouseMove = A
+GraphicsWindow.MouseDown = B
+GraphicsWindow.KeyDown = D1
+GraphicsWindow.KeyUp= D2
+GraphicsWindow.MouseUp= D3
+Sub D1
+  GraphicsWindow.BackgroundColor= (GraphicsWindow.GetRandomColor())
+  EndSub
+Sub D2
+  GraphicsWindow.BackgroundColor= "Cyan"
+EndSub
+Sub D3
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor= "White"
+  EndSub
+GraphicsWindow.Title= "Try holding down a mouse button and a keyboard key!"
+Sub B
+C = GraphicsWindow.MouseX
+D = GraphicsWindow.MouseY
+EndSub
+Sub A
+E = GraphicsWindow.MouseX
+F = GraphicsWindow.MouseY
+If (Mouse.IsLeftButtonDown) Then
+  GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.PenWidth = (25)
+GraphicsWindow.DrawRectangle(C, D, E, F)
+EndIf
+C = E
+D = F
+EndSub

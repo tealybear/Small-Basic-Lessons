@@ -1,0 +1,11 @@
+For N = 0 To 10
+   TextWindow.CursorLeft = N
+   TextWindow.Write(" See yah")
+   Program.Delay(250)
+   While N = 5
+     TextWindow.Clear()
+   TextWindow.WriteLine("I'm glad you could join me for that...")
+   Program.Delay(1000)
+   TextWindow.WriteLine("Wasn't it... fun?")
+   EndWhile
+ EndFor

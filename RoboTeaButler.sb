@@ -1,0 +1,10 @@
+TextWindow.ForegroundColor = "Red"
+TextWindow.BackgroundColor = "Black"
+TextWindow.WriteLine("Hello Mr.Garcia, How was your morning tea?")
+Reaction = TextWindow.Read()
+Program.Delay(2000)
+TextWindow.WriteLine("I'm sorry... I'll have to remake it again! At once, right away sir!")
+TextWindow.Pause()
+TextWindow.WriteLine("I'm sorry, it's just that...")
+Program.Delay(1000)
+TextWindow.WriteLine("It's just that " + Reaction + " is not the reaction that I was looking for. I'll impress you tomorrow morning, I promise!")

@@ -1,0 +1,13 @@
+TextWindow.Title = ("50 GigaBytes free in HDD")
+TextWindow.WriteLine("How large is the file you need to download, in GB?:")
+FileSize = TextWindow.ReadNumber()
+If (FileSize <= 50) Then 
+  TextWindow.WriteLine("Your download is 50 GB or less.") 
+  program.Delay(1000)
+  TextWindow.WriteLine("Beginning download.")
+EndIf
+If (FileSize > 50) Then 
+  TextWindow.WriteLine("Your download exceeds the allotted 50 GB on this drive.")
+  Program.Delay(1000)
+  TextWindow.WriteLine("Download Cancelled.")
+  EndIf

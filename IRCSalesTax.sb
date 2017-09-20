@@ -1,0 +1,17 @@
+TextWindow.Title = ("IRC Sales-Tax")
+TextWindow.ForegroundColor = "Green"
+TextWindow.BackgroundColor = "Orange"
+TextWindow.Top = 200
+TextWindow.Left = 500
+TextWindow.CursorTop = 15
+TextWindow.CursorLeft = 42
+TextWindow.WriteLine("Indian River County Sales-Tax Calculator")
+Program.Delay(1000)
+TextWindow.CursorTop = 16
+TextWindow.CursorLeft = 50
+TextWindow.WriteLine("Please enter your total below.")
+UnTaxedAmount = TextWindow.ReadNumber()
+SalesTax = (UnTaxedAmount * 7/100)
+TextWindow.CursorTop = 15
+TextWindow.CursorLeft = 50
+TextWindow.WriteLine("The total Sales Tax for your item is " + SalesTax + ".")

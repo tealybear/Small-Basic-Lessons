@@ -1,0 +1,23 @@
+GraphicsWindow.Title = "Paint with Text and lines, GO CRAZY!"
+Start:
+GraphicsWindow.Height=600
+GraphicsWindow.Width=700
+GraphicsWindow.PenColor= C
+GraphicsWindow.DrawRectangle(a,B,C,D)
+GraphicsWindow.PenWidth=(30)
+GraphicsWindow.DrawLine(A,D,B,200)
+GraphicsWindow.DrawLine(D,B,200,A)
+GraphicsWindow.BackgroundColor= "Black"
+GraphicsWindow.DrawBoundText(A, B,150,"Bust a move!")
+GraphicsWindow.DrawBoundText(A, B, 150, "Bust a move!")
+GraphicsWindow.SetPixel(A, B, C)
+C= GraphicsWindow.GetRandomColor()
+A = GraphicsWindow.MouseX
+B = GraphicsWindow.MouseY
+D = (A + B)
+If Mouse.IsLeftButtonDown Then
+  GraphicsWindow.BackgroundColor= "White"
+  GraphicsWindow.FontItalic="True"
+EndIf
+Program.Delay(80)
+Goto start

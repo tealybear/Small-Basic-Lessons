@@ -1,0 +1,43 @@
+TextWindow.Title = "Split your numbers!"
+Retry:
+TextWindow.WriteLine("Welcome to   ")
+Program.Delay(1000)
+TextWindow.WriteLine("SPLIT   ")
+Program.Delay(1000)
+TextWindow.WriteLine("YOUR   ")
+Program.Delay(1000)
+TextWindow.WriteLine("NUMBERS!!!!(in half)")
+Program.Delay(1000)
+TextWindow.WriteLine("Enter a number to begin!")
+Number = TextWindow.ReadNumber()
+TextWindow.Clear()
+While(Number > 1)
+  TextWindow.WriteLine(Number)
+  Number = Number / 2
+EndWhile
+TextWindow.WriteLine("Would you like to try another number? Y/N: ")
+Reply = TextWindow.Read()
+If Reply = "Y" Then
+  Goto Retry
+EndIf
+  If Reply = "y" Then
+  Goto Retry
+EndIf
+If Reply = "N" Then
+  Program.Delay(1000)
+  TextWindow.WriteLine("Fine, want to see what your number is DOUBLED?!?")
+  TextWindow.WriteLine("Now lets put 'em together again!")
+For a = 1 to number
+TextWindow.WriteLine(a + " x " + number + " = " + a * number)
+EndFor
+EndIf
+  If Reply = "n" Then
+  Program.Delay(1000)
+  TextWindow.WriteLine("Fine, want to see what your number is DOUBLED?!?")
+  TextWindow.WriteLine("Now lets put 'em together again!")
+For a = 1 to number
+TextWindow.WriteLine(a + " x " + number + " = " + a * number)
+EndFor
+EndIf
+
+

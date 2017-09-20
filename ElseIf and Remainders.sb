@@ -1,0 +1,12 @@
+TextWindow.WriteLine("Welcome to Tony's Spumoni!")
+Program.Delay(1000)
+TextWindow.WriteLine("We only have 3 tables left in the whole joint. How many a you's do we got?")
+PartyNumber = TextWindow.ReadNumber()
+If (PartyNumber <= 6) Then
+  TextWindow.WriteLine("Nice, I got just enough room for you's guys!")
+  Else
+    TextWindow.WriteLine("Actually uhh " + PartyNumber + " people? Lets see if we could squeeze you in. Each table will fit 2 maybe 3...")
+    Program.Delay(1000)
+    ExcessParty = Math.Remainder (PartyNumber(6))
+    TextWindow.WriteLine("I'm sure we could find " + Math.Ceiling(ExcessParty) + " extra chairs around somewhere!")
+    EndIf

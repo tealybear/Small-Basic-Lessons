@@ -1,0 +1,13 @@
+TextWindow.Write("Kids under 18 can't get in past 10pm. How old are you?:")
+TextWindow.CursorTop = 8
+Age = TextWindow.Read()
+  If(Age < 18) Then
+    TextWindow.WriteLine("Sorry you're only " + Age + " years old.")
+    Program.Delay(2000)
+    TextWindow.WriteLine("Y'know what kid, C'mon in.")
+   EndIf 
+    If(Age >= 18) Then
+      TextWindow.WriteLine("You don't look a day over 14, next time stand up straight or I'll stop you again.")
+    EndIf
+    
+    TextWindow.write

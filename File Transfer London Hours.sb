@@ -1,0 +1,16 @@
+File.GetDirectories("C:\Users\David\Desktop")
+TextWindow.WriteLine("Please insert the file you wish to transfer's location: (Without quotations)")
+Path= TextWindow.Read()
+Program.Delay(1000)
+TextWindow.WriteLine("Please insert your desired destination: (Without quotations)")
+Dest= TextWindow.Read()
+TextWindow.WriteLine("Checking if London office is ready to recieve file...")
+London= Clock.Hour+8
+If London>9 And London<21 Then
+  File.CopyFile(Path,Dest) 
+TextWindow.WriteLine("Transfer Complete.")
+Else
+  Program.Delay(1000)
+  TextWindow.WriteLine("The time in London is currently: "+(((Clock.Hour)+8)-24)+":"+Clock.Minute+":"+Clock.Second+".")
+  TextWindow.WriteLine("Sorry, the London branch is not responding. Please try again during normal business hours.")
+  EndIf
